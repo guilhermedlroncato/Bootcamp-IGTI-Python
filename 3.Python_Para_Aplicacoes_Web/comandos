@@ -1,0 +1,8 @@
+-> Criar novo projeto Django
+   django-admin startproject igtiflix
+
+-> Rodar o projeto Django
+   python3 manage.py runserver
+
+-> Criar um novo app
+   python3 manage.py startapp principal

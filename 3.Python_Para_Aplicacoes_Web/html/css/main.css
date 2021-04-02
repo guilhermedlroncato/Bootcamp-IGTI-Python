@@ -1,0 +1,15 @@
+#titulo {
+    background-color: ivory;
+    text-align: center;
+    font-size: 50px;
+    font-family: Roboto;
+    font-weight: bold;
+}
+
+div {
+    text-align: center;
+}
+
+.erro {
+    color: red;
+}

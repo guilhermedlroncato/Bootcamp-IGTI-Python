@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Pagina Principal</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <meta name="theme-color" content="#fafafa">
+    </head>
+    <body>
+        <div>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Nome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>João</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Maria</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="titulo">Formulário Cadastro de Nomes</div>
+        <div>
+            <form method="POST" id="formulario">
+                <label for="nome">Nome:</label>
+                <input type="text" name="Nome" id="nome" value="" placeholder="Digite o seu Nome!">
+                <div class="erro">Mensagem de Erro</div>
+                <input type="submit" id="submit-button" value="Enviar">
+            </form>
+        </div>        
+    </body>
+
+</html>
