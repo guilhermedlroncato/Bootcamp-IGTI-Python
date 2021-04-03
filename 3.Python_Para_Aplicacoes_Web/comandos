@@ -6,3 +6,15 @@
 
 -> Criar um novo app
    python3 manage.py startapp principal
+
+-> Cria as tabelas bases do django
+   python3 manage.py migrate
+
+-> Criar o supoer usuário do django
+   python3 manage.py createsuperuser
+
+-> Fazer a migração de um classe(tabela) para o banco de dados - Cria a DDL 
+   python3 manage.py makemigrations genero
+
+-> Comando para aplicar a migrate no banco de dados
+   python3 manage.py migrate

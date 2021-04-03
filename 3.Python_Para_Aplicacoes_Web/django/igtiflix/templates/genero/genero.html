@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <link href="{% static 'css/menu.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static 'css/crud.css' %}" rel="stylesheet" type="text/css">
+        <title>IGTIFlix</title>
+    </head>
+    <body>
+        {% include "../menu.html" %}
+        <main>
+            <div class="container">
+                <div>
+                    {% if genero_records %}
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Gênero</th>
+                                <th>Clique para Alterar</th>
+                                <th>Clique para Excluir</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for genero in genero_records %}
+                                <tr>
+                                    <td>{{genero.descricao}}</td>
+                                    <td><button class="list-button editar-button" onclick=updateItem({{genero.id}})>Alterar</button></td>
+                                    <td><button class="list-button apagar-button" onclick=deleteItem({{genero.id}})>Excluir</button></td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    {% else %}
+                        <p>Nenhum Gênero Encontrado</p>
+                    {% endif %}
+                </div>
+                <div>
+                    <form onsubmit="/genero" id="form-genero" method="post">
+                        {{form}}
+                        {% csrf_token %}
+                        <input type="submit" id="submit-button" class="submit-button" value="Enviar"/>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </body>
+    <script>
+        function deleteItem(id){
+            const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+            const request = new Request(
+                "/genero/delete/" + id,
+                {headers:{'X-CSRFToken':csrftoken}}
+            )
+            fetch(request,{
+                method: 'DELETE',
+                mode: 'same-origin'
+            }).then(
+                function (response){
+                    if (response.status === 500){
+                        alert('Não foi possivel excluir')
+                    } else {
+                        location.replace("/genero")
+                    }
+                }
+            )
+        }
+
+        function updateItem(id){
+            location.replace('/genero/update/' + id);
+        }
+    </script>
+</html>
