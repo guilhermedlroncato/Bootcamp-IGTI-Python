@@ -1,3 +1,5 @@
+DJANGO
+
 -> Criar novo projeto Django
    django-admin startproject igtiflix
 
@@ -18,3 +20,8 @@
 
 -> Comando para aplicar a migrate no banco de dados
    python3 manage.py migrate
+
+   FLASK
+
+-> Comando para rodar um .py Flask
+   python3 app.py
