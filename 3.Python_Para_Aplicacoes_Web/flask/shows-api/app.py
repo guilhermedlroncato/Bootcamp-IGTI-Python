@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 from data import alchemy
-from model import show, episode
+from model import show, episode, user
+from werkzeug.security import generate_password_hash
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:root@localhost/showapi'
