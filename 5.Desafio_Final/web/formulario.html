@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Diabetes</title>
+    </head>
+    <body>
+        <h3>Previsão Diabetes</h3>
+        <div>
+            <form action="/resultado" method="POST">
+                <label for="gest">Número de Gestações</label>
+                <input type="text" id="gest" name="gest">
+                <br>
+                <label for="glic">Concentração de Glicose</label>
+                <input type="text" id="glic" name="glic">
+                <br>
+                <label for="press">Pressão Diastolica</label>
+                <input type="text" id="press" name="press">
+                <label for="press">(mm HG)</label>
+                <br>
+                <label for="espdobcu">Espessura da Dobra Cutânea do Tríceps</label>
+                <input type="text" id="espdobcu" name="espdobcu">
+                <label for="espdobcu">(mm)</label>
+                <br>
+                <label for="nivinsu">Nivel Insulina</label>
+                <input type="text" id="nivinsu" name="nivinsu">
+                <label for="nivinsu">(mu U/ml)</label>
+                <br>
+                <label for="imc">Indice Massa Corporal</label>
+                <input type="text" id="imc" name="imc">
+                <br>
+                <label for="histdia">Historico Familiar de Diabetes</label>
+                <input type="text" id="histdia" name="histdia">
+                <br>      
+                <label for="idade">Idade</label>
+                <input type="text" id="idade" name="idade">
+                <br>                          
+                <input type="submit" id="enviar" class="enviar" value="Verificar Diabetes"/>
+            </form>
+        </div>
+    </body>
+</html>
